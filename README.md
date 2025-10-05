@@ -8,9 +8,6 @@ JSON Resume Kit is a client-side tool to visually manage your CV data and instan
 
 **[➡️ Go to the Live Editor](https://mahdihoseinpoor.github.io/JSON-Resume-Kit/editor/)**
 
-![Showcase of the JSON Resume Kit Editor and Template](https://user-images.githubusercontent.com/6263435/208221808-73b39243-7f72-4d2d-9473-b3a1d402377a.png)
-*(Feel free to replace this with your own updated screenshot)*
-
 ### The Problem
 
 Keeping a resume updated often means digging through `divs`, `spans`, and CSS classes. It's slow, prone to layout-breaking errors, and mixes your professional history with presentation code.
