@@ -6,7 +6,7 @@ JSON Resume Kit is a client-side tool to visually manage your CV data and instan
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**[➡️ Go to the Live Editor](https://mahdihoseinpoor.github.io/JSON-Resume-Kit/editor/)**
+**[➡️ Go to the Live Editor](https://mahdihoseinpoor.github.io/JSON-Resume-Kit/editor)**
 
 ### The Problem
 
@@ -31,7 +31,7 @@ There are two ways to use the JSON Resume Kit, depending on your needs.
 
 This is the fastest way to create a beautiful resume for a one-time use (e.g., to save as a PDF).
 
-1.  **[Open the Editor](https://mahdihoseinpoor.github.io/JSON-Resume-Kit/editor/)**.
+1.  **[Open the Editor](https://mahdihoseinpoor.github.io/JSON-Resume-Kit/editor)**.
 2.  Fill in your professional information in the various sections.
 3.  Click the **"Live Preview"** button.
 4.  Your fully-rendered resume will open in a new browser tab. From there, you can print it or save it as a PDF (`Ctrl+P` or `Cmd+P`).
