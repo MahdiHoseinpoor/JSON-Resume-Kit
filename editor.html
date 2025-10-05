@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ویرایشگر رزومه</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <h1>ویرایشگر رزومه</h1>
+        <p class="developer-credit">مدیریت محتوای فایل <a href="Template/Neumorphism/data/data.json" target="_blank">data.json</a></p>
+    </header>
+
+    <div class="container">
+        <div class="main-layout">
+            <aside class="sidebar">
+                <div class="section">
+                    <h2>بخش‌های رزومه</h2>
+                    <nav class="editor-nav">
+                        <ul>
+                            <li><a data-target="profile-editor" class="editor-nav-link active">اطلاعات فردی (Profile)</a></li>
+                            <li><a data-target="projects-editor" class="editor-nav-link">پروژه‌ها (Projects)</a></li>
+                            <li><a data-target="experiences-editor" class="editor-nav-link">سوابق شغلی (Experiences)</a></li>
+                            <li><a data-target="skills-editor" class="editor-nav-link">مهارت‌ها (Skills)</a></li>
+                            <li><a data-target="education-editor" class="editor-nav-link">تحصیلات (Education)</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                 <div class="section">
+                    <h2>عملیات</h2>
+                    <div class="form-group">
+                        <label for="template-selector" style="font-size: 1rem;">انتخاب قالب پیش‌نمایش</label>
+                        <select id="template-selector">
+                            <option value="Classic">Classic (مناسب پرینت)</option>
+                            <option value="Neumorphism">Neumorphism (تعاملی)</option>
+                        </select>
+                    </div>
+                    <p>قالب مورد نظر را انتخاب و روی دکمه زیر کلیک کنید تا رزومه در یک تب جدید باز شود.</p>
+                    <button id="live-preview-btn" class="save-button" style="background-color: var(--success-color); margin-bottom: 1rem;">پیش‌نمایش زنده</button>
+                    
+                    <p>برای ذخیره دائمی، فایل <code>data.json</code> را دانلود کرده و در پروژه جایگزین کنید.</p>
+                    <button id="save-json-btn" class="save-button">ذخیره و دانلود JSON</button>
+                </div>
+            </aside>
+            <main class="main-content">
+                <!-- Instructions Section -->
+                <div class="section" id="instructions">
+                    <details class="instructions-details" open>
+                        <summary>راهنمای سریع استفاده از ویرایشگر (برای نمایش/پنهان کردن کلیک کنید)</summary>
+                        <div class="instructions-content">
+                            <h4>این ابزار برای چیست؟</h4>
+                            <p>این ویرایشگر به شما اجازه می‌دهد تا محتوay خود را به راحتی مدیریت کنید. پس از اتمام ویرایش، یک فایل <code>data.json</code> دریافت خواهید کرد که می‌توانید از آن در قالب رزومه استفاده کنید.</p>
+                            
+                            <h4>مراحل استفاده</h4>
+                            <ol>
+                                <li><strong>بارگذاری داده (اختیاری):</strong> اگر از قبل یک فایل <code>data.json</code> دارید، می‌توانید آن را از طریق بخش "بارگذاری داده‌های رزومه" بارگذاری کنید تا ویرایش را از آنجا ادامه دهید. در غیر این صورت، فرم‌ها با اطلاعات پیش‌فرض پر می‌شوند.</li>
+                                <li><strong>ویرایش بخش‌ها:</strong> با استفاده از منوی "بخش‌های رزومه" در ستون کناری، بین بخش‌های مختلف (اطلاعات فردی، پروژه‌ها، و...) جابجا شوید و اطلاعات خود را وارد یا ویرایش کنید.</li>
+                                <li><strong>پیش‌نمایش زنده:</strong> از منوی "انتخاب قالب"، ظاهر دلخواه خود را انتخاب کنید (قالب <strong>Classic</strong> برای پرینت و PDF مناسب است). سپس روی دکمه <strong>"پیش‌نمایش زنده"</strong> کلیک کنید تا نتیجه را فوراً در یک تب جدید ببینید.</li>
+                                <li><strong>ذخیره و دانلود:</strong> پس از اتمام ویرایش، بر روی دکمه "ذخیره و دانلود JSON" کلیک کنید تا فایل <code>data.json</code> نهایی را دریافت کنید.</li>
+                                <li><strong>مشاهده نتیجه نهایی:</strong> فایل دانلود شده را در پوشه قالب مربوطه (مثلاً <code>Template/Classic/data/</code>) قرار دهید و فایل <code>index.html</code> همان پوشه را باز کنید.</li>
+                            </ol>
+                        </div>
+                    </details>
+                </div>
+
+                <!-- Data Loader Section -->
+                <div class="section" id="data-loader">
+                    <h2>بارگذاری داده‌های رزومه (اختیاری)</h2>
+                    <div class="input-tabs">
+                        <button class="tab-btn active" data-tab="file-tab">بارگذاری از فایل</button>
+                        <button class="tab-btn" data-tab="paste-tab">چسباندن متن</button>
+                    </div>
+                    <div id="file-tab" class="tab-content active">
+                        <label for="file-input" class="file-label">انتخاب فایل data.json</label>
+                        <input type="file" id="file-input" accept=".json">
+                        <span id="file-name">فایلی انتخاب نشده است</span>
+                    </div>
+                    <div id="paste-tab" class="tab-content">
+                        <textarea id="paste-area" placeholder="محتوای فایل data.json را اینجا بچسبانید..."></textarea>
+                        <button id="paste-btn" class="paste-button">پردازش متن</button>
+                    </div>
+                </div>
+
+                <!-- Editor Sections -->
+                <div id="profile-editor" class="editor-section active">
+                    <div class="section">
+                        <h2>اطلاعات فردی (Profile)</h2>
+                        <div class="form-group"><label for="profile-name">نام</label><input type="text" id="profile-name" data-key="name"></div>
+                        <div class="form-group"><label for="profile-title">عنوان شغلی</label><input type="text" id="profile-title" data-key="title"></div>
+                        <div class="form-group"><label for="profile-imageUrl">URL تصویر پروفایل</label><input type="url" id="profile-imageUrl" data-key="imageUrl" placeholder="https://example.com/image.png"></div>
+                        <div class="form-group"><label for="profile-summary">خلاصه</label><textarea id="profile-summary" data-key="summary" rows="4"></textarea></div>
+                    </div>
+                     <div class="section"><h3>اطلاعات کلیدی (Key Info)</h3><div id="profile-keyinfo-list" class="item-list"></div><button class="add-item-btn" data-type="keyInfo">+ افزودن اطلاعات کلیدی</button></div>
+                     <div class="section"><h3>لینک‌ها (Links)</h3><div id="profile-links-list" class="item-list"></div><button class="add-item-btn" data-type="link">+ افزودن لینک</button></div>
+                </div>
+                <div id="projects-editor" class="editor-section"><div class="section"><h2>پروژه‌ها (Projects)</h2><div id="projects-list" class="item-list"></div><button class="add-item-btn" data-type="project">+ افزودن پروژه جدید</button></div></div>
+                <div id="experiences-editor" class="editor-section"><div class="section"><h2>سوابق شغلی (Experiences)</h2><div id="experiences-list" class="item-list"></div><button class="add-item-btn" data-type="experience">+ افزودن سابقه شغلی</button></div></div>
+                <div id="skills-editor" class="editor-section"><div class="section"><h2>مهارت‌ها (Skills)</h2><div id="skills-list" class="item-list"></div><button class="add-item-btn" data-type="skill">+ افزودن دسته‌بندی مهارت</button></div></div>
+                <div id="education-editor" class="editor-section"><div class="section"><h2>تحصیلات (Education)</h2><div id="education-list" class="item-list"></div><button class="add-item-btn" data-type="education">+ افزودن مدرک تحصیلی</button></div></div>
+            </main>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+         <p>ساخته شده توسط <a href="https://github.com/MahdiHoseinpoor" target="_blank" rel="noopener noreferrer">مهدی حسین پور</a> | <a href="https://github.com/MahdiHoseinpoor/CvDataEditor" target="_blank" rel="noopener noreferrer">مخزن پروژه در گیت‌هاب</a></p>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

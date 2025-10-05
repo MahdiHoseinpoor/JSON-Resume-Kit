@@ -1,0 +1,100 @@
+{
+  "profile": {
+    "name": "جان دو",
+    "title": "توسعه دهنده نرم افزار",
+    "imageUrl": "https://via.placeholder.com/150",
+    "summary": "توسعه‌دهنده نرم‌افزار با انگیزه و علاقه‌مند به یادگیری تکنولوژی‌های جدید. به دنبال فرصتی برای رشد و به کارگیری مهارت‌های خود در یک محیط چالش‌برانگیز هستم.",
+    "keyInfo": [
+      {
+        "title": "نقش",
+        "value": "توسعه‌دهنده نرم افزار (Software Developer)"
+      },
+      {
+        "title": "تکنولوژی‌های کلیدی",
+        "value": "JavaScript, React, Node.js, HTML, CSS"
+      },
+      {
+        "title": "دستاورد",
+        "value": "مشارکت در چندین پروژه متن‌باز"
+      },
+      {
+        "title": "تحصیلات",
+        "value": "کارشناسی مهندسی نرم‌افزار"
+      }
+    ],
+    "links": [
+      {
+        "name": "GitHub",
+        "url": "#"
+      },
+      {
+        "name": "LinkedIn",
+        "url": "#"
+      }
+    ]
+  },
+  "projects": [
+    {
+      "title": "پروژه نمونه اول",
+      "imageUrl": "https://via.placeholder.com/400x200",
+      "description": "توضیحی کوتاه در مورد این پروژه که اهداف و دستاوردهای آن را شرح می‌دهد.",
+      "technologies": [
+        "React",
+        "Node.js",
+        "Express"
+      ]
+    },
+    {
+      "title": "پروژه نمونه دوم",
+      "imageUrl": "https://via.placeholder.com/400x200",
+      "description": "این پروژه بر روی حل یک مشکل خاص با استفاده از تکنولوژی‌های مدرن تمرکز دارد.",
+      "technologies": [
+        "Vue.js",
+        "Firebase"
+      ]
+    }
+  ],
+  "experiences": [
+    {
+      "company": "شرکت نرم‌افزاری نمونه",
+      "role": "توسعه‌دهنده جونیور",
+      "date": "۱۴۰۰ - ۱۴۰۱",
+      "responsibilities": [
+        "کمک در توسعه و نگهداری وب اپلیکیشن‌های شرکت.",
+        "همکاری با تیم برای رفع باگ‌ها و بهبود عملکرد.",
+        "یادگیری و پیاده‌سازی ویژگی‌های جدید تحت نظارت توسعه‌دهندگان ارشد."
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "category": "فرانت‌اند",
+      "items": [
+        "HTML5",
+        "CSS3",
+        "JavaScript (ES6+)",
+        "React",
+        "Vue.js",
+        "Bootstrap"
+      ]
+    },
+    {
+      "category": "بک‌اند و ابزارها",
+      "items": [
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "SQL",
+        "Git",
+        "Docker"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "دانشگاه نمونه",
+      "degree": "کارشناسی مهندسی نرم‌افزار",
+      "date": "مهر ۱۳۹۶ - تیر ۱۴۰۰"
+    }
+  ]
+}

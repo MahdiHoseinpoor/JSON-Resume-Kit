@@ -1,0 +1,205 @@
+:root {
+    --font-family: 'Vazirmatn', sans-serif;
+    --text-color: #333;
+    --heading-color: #111;
+    --primary-color: #005a9c;
+    --bg-color: #f4f4f4;
+    --page-bg-color: #ffffff;
+    --border-color: #ddd;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    line-height: 1.7;
+    font-size: 11pt;
+}
+
+.resume-container {
+    background-color: var(--page-bg-color);
+    width: 21cm;
+    min-height: 29.7cm; /* A4 height */
+    margin: 2rem auto;
+    padding: 2.5cm;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    color: var(--heading-color);
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.25rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* --- Header & Profile --- */
+.profile-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+.profile-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--text-color);
+    margin: 0;
+}
+.contact-info {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0 1.5rem;
+}
+.contact-info li {
+    font-size: 0.95rem;
+}
+
+/* --- Item styles (Experience, Education, Project) --- */
+.item {
+    margin-bottom: 1.5rem;
+}
+.item:last-child {
+    margin-bottom: 0;
+}
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.25rem;
+}
+.item-header h3 {
+    margin: 0;
+}
+.item-date {
+    font-weight: 500;
+    color: #555;
+    flex-shrink: 0;
+}
+.item-subtitle {
+    font-weight: 500;
+    margin: 0 0 0.5rem 0;
+}
+.item-content ul {
+    padding-right: 20px;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+.item-content li {
+    margin-bottom: 0.4rem;
+}
+
+/* --- Skills --- */
+.skills-list .skill-category {
+    margin-bottom: 1rem;
+}
+.skills-list .skill-category:last-child {
+    margin-bottom: 0;
+}
+.skill-category-title {
+    display: inline-block;
+    font-weight: 700;
+    width: 120px; /* Adjust as needed */
+}
+.skill-items {
+    display: inline;
+}
+
+/* --- Projects --- */
+.project-technologies {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #666;
+}
+
+/* --- Footer --- */
+.resume-footer {
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: #888;
+}
+.resume-footer a {
+    color: #555;
+    font-weight: bold;
+}
+
+
+/* --- PRINT STYLES --- */
+@media print {
+    @page {
+        margin: 1.5cm;
+    }
+
+    body {
+        background-color: #fff;
+        font-size: 10pt;
+    }
+
+    .resume-container {
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        min-height: auto;
+    }
+    
+    .resume-footer {
+        display: none; /* Hide footer on print */
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--heading-color);
+    }
+    
+    a[href^="http"]:after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+        color: #555;
+    }
+    
+    h2 {
+        page-break-after: avoid;
+        page-break-inside: avoid;
+    }
+
+    .item, .skill-category {
+        page-break-inside: avoid;
+    }
+}
